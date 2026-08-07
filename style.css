@@ -1,0 +1,36 @@
+.closebutton {
+    display: flex;
+    cursor: pointer;
+    background-color: red;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    margin-top: 3px;
+    margin-left: 10px
+}
+
+.window {
+    display: flex; 
+    flex-direction: column;
+    background-color:#303446c9;
+    backdrop-filter: blur(10px);
+    border: solid;
+    border-color:#626880;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+
+.windowheader {
+    cursor: grab;
+    display: flex;
+    flex-direction: row;
+    background-color: #626880;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.selected {
+    border: solid;
+    border-color: aquamarine;
+}

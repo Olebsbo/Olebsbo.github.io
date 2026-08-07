@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+  <body style="color: #c6d0f5;  background-image: url(./PokemonLastSupper.png); background-size: cover;  background-color: lavender; font-family: Noto Sans, sans-serif;">
+    
+
+
+    <div id="bar" style="position:absolute;  height: 98%; display:flex; justify-content: space-between; flex-direction: column; backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0.1); color: #c6d0f5; border-radius: 10px;">
+      <div style = "display: flex; flex-direction: column; width: 100;">
+        <img style = "cursor: pointer; position: absolute; width: 100%; border-radius: 10px;" id="welcomeopen" src = "./PixelMewWP.jpg" />
+      </div>
+      
+      <script>
+        function updateTime() {
+          var current_time = new Date().toLocaleDateString();
+          var time_text = document.querySelector("#time_element");
+          time_text.innerHTML = current_time
+        }
+        setInterval(updateTime, 1000);
+        
+      </script>
+      <p id="time_element" style="margin: 10px; font-size:10px">
+        Time
+      </p>
+    </div>
+
+
+
+    <div class = "window" id="welcome" style = "width: 1000px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+      <div class="windowheader" id ="welcomeheader" >
+        <div class="closebutton" id="welcomeclose">
+        </div>
+      </div>
+      
+      <h1>Welcome to my OS</h1>
+      <h2>About Me</h2>
+      <p>Hello! I'm a game developer, programmer, and general computer enthusiast. Nice to meet you!</p>
+      <p>I also really like Pokemon; my favorite is Ampharos :)</p>
+      <p >I use Linux! Not Arch though... Mint works best for me.</p>
+      <div style = "display:flex; flex-direction: row; justify-content: space-evenly;">
+        <img style = " object-fit: cover; border-radius: 4px; width: 200px; height: 300px" src="./ampharos.png"> <img style = " object-fit: cover; border-radius: 4px; width: 640px; height: 360px" src="./linux_setup.png" />
+      </div>
+      <p>My Mint Cinnamon rice! Don't ask why I have Microsoft Edge (I'm poor and I want those Microsoft Reward points 😭)</p>
+
+      <h2>More about me:</h2>
+      <a style = "color: #c6d0f5" href="https://github.com/Olebsbo">Github</a>
+      <a style = "color: #c6d0f5" href="https://olebsbo.itch.io/">Itch.io</a>
+    </div>
+
+    
+
+
+    <div id="desktopApps" style="padding-top: 64px; padding-left: 90px;">
+      <div id="artopen" style = "cursor: pointer; padding: 10px; width: fit-content; border-radius: 5px;">
+        <img src="./AmpharosWithStars.jpg" style = "height: 100px; border-radius: 20px;">
+      </div>
+    </div>
+
+
+    <div class = "window" id="art" style = "display: none; width: 1000px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+      <div class = "windowheader" id="artheader">
+        <div class = "closebutton" id="artclose">
+        </div>
+      </div>
+
+      <div>
+        <h1>ART</h1>
+        <p>The art used in this WebOS are not mine. I found them all on pinterest, so I had to do some backsearching to find the artists.</p>
+        <p>Unfortunately, I couldn't figure out for certain some of the artists, but I've listed all the ones that I could find that seem to be right.</p>
+        <div style = "display: flex; justify-content: space-evenly;">
+          <div >
+            <p>Ampharos with stars: Tansho</p>
+            <img src="./AmpharosWithStars.jpg" style = "height: 150px; border-radius: 20px;">
+            <p>Pokemon - The Last Supper: Kabocha Torute</p>
+            <img src="./PokemonLastSupper.png" style = "height: 200px; border-radius: 20px;">
+            <p>Ampharos: Official Pokemon art</p>
+            <img src="./ampharos.png" style = "height: 150px; border-radius: 20px">
+          </div>
+          <div>
+            <p>
+              Pixel Mew: Unknown
+            </p>
+            <img src="./PixelMewWP.jpg" style = "height: 200px; border-radius: 20px">
+            <p>
+              My Wallpaper: Unknown
+            </p>
+            <img src="./linux_setup.png" style = "height: 200px; border-radius: 20px">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+
+
+
+  <script type="module" src="./script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</html>
