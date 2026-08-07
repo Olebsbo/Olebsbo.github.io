@@ -1,12 +1,16 @@
 // Make the DIV element draggable:
 dragElement(document.getElementById("welcome"));
 dragElement(document.querySelector("#art"))
+dragElement(document.querySelector("#game"))
 var welcomeScreen = document.querySelector("#welcome")
 var welcomeScreenClose = document.querySelector("#welcomeclose")
 var welcomeScreenOpen = document.querySelector("#welcomeopen")
 var artScreen = document.querySelector("#art")
 var artScreenClose = document.querySelector("#artclose")
 var artScreenOpen = document.querySelector("#artopen")
+var gameScreen = document.querySelector("#game")
+var gameScreenClose = document.querySelector("#gameclose")
+var gameScreenOpen = document.querySelector("#gameopen")
 var selectedIcon = undefined
 var biggestIndex = 1;
 var sideBar = document.querySelector("#bar")
@@ -27,11 +31,23 @@ artScreenOpen.addEventListener("click", function() {
   openWindow(artScreen);
 });
 
+gameScreenClose.addEventListener("click", function() {
+  closeWindow(gameScreen);
+});
+
+gameScreenOpen.addEventListener("click", function() {
+  openWindow(gameScreen);
+});
+
 addWindowTapHandling(welcomeScreen)
 addWindowTapHandling(artScreen)
+addWindowTapHandling(gameScreen)
 
 function closeWindow(element) {
   element.style.display = "none"
+  if (element.id == "game") {
+    reloadGame()
+  }
 }
 function openWindow(element) {
   element.style.display = "flex"
@@ -65,7 +81,12 @@ function handleWindowTap(element) {
   element.style.zIndex = biggestIndex;
   sideBar.style.zIndex = biggestIndex + 1;
 }
-
+function reloadGame() {
+  const frame= document.getElementById("game-frame");
+  const placeholder = document.getElementById("game-placeholder");
+  frame.src = "";
+  placeholder.style.display = "flex"
+}
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {
