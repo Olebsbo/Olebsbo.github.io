@@ -3,3 +3,7 @@ A personal website about me, containing an about me page, an artist credit app f
 You can visit it at: https://olebsbo.github.io
 <img width="1869" height="999" alt="Screenshot from 2026-08-07 16-56-39" src="https://github.com/user-attachments/assets/69101187-508c-415b-b471-208501d6e6df" />
 If you'd like to download it and test it yourself, you'll want to use the index.html file **outside** of the "SuperBeachBall-V1.02-Web" folder, since the one inside that folder is the one that runs the game. You'll need all the other files too since they all depend on each other. I personally just tested it using the vscode live server extension (install the extension, go into the index.html file outside of the SuperBeachBall folder, right click anywhere in the coding area, select to open with live server). If you want to actually host my website for some reason, just remember to use the index.html file oustside the SuperBeachBall folder, and follow whatever steps your hosting method requires.
+AI Usage:
+I used Gemini to help with debugging an issue where the background wasn't rendering properly, which turned out to be a problem connected with the dark reader extension that was affecting the backup background color.
+I also used Gemini for help understanding iframes to allow me to embed a game in the website. It produced some of the javascript code, but I integrated the scripts into the already existing window systems myself.
+Everything else was done by me while I was following the WebOS 1 guide: https://jams.hackclub.com/batch/webOS
